@@ -26,11 +26,9 @@ class TickerTrack:
         res = handler()(data, self.topK)
         # print(res)
         if self.writer and self.file_name:
-            # print(res)
+            print(res)
             await writer()(res, self.file_name)
             # asyncio.run(writer()(res, self.file_name))
+
     def stop(self):
         self.task.cancel()
-
-
-
